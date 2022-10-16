@@ -33,7 +33,7 @@ public class ScrapeMedia {
       for (Element a: contentClassAnchor) {
 
          titleLinks[i++] = a.attr("href");
-       //System.out.println(a.attr("href"));
+         //System.out.println(a.attr("href"));
       }
 
       tPage(titleLinks);
@@ -56,9 +56,9 @@ public class ScrapeMedia {
          System.out.println("\nScrapping " + title + "...");
 
          for (Element p: titleClassDiv) {
-        	 
-        	 contentPtag += p.text() + "\n\n";
-           //System.out.println(p.getElementsByTag("p").text());
+
+            contentPtag += p.text() + "\n\n";
+            //System.out.println(p.getElementsByTag("p").text());
          } 
          
          fOb.fileCnM(title, contentPtag);
@@ -66,6 +66,8 @@ public class ScrapeMedia {
          
       } while (j < titleLinks.length);      
    }
+
+   // Incomplete ⤵
 
    void cPage() throws IOException {
 
