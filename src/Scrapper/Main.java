@@ -13,7 +13,7 @@ public class Main {
 
       System.out.println("[0] Scrape all titles on a given page index (default val: 1).\n" +
          "[1] Enter a particular title link to Scrape.\n" +
-         "[2] Choose a category to scrape. (incomplete)\n" +
+         "[2] Choose a category to scrape.\n" +
          "=".repeat(61) +
          "\n");
 
@@ -41,13 +41,13 @@ public class Main {
 
       case 2:
 
-         smOb.cPage();
+         smOb.cPage(scr);
 
          break;
          
       default:
 
-         System.out.println("\nNot Valid");
+         System.out.println("\nInvalid");
       }
 
       scr.close();
