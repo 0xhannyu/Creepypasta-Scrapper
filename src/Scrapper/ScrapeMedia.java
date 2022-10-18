@@ -97,7 +97,7 @@ public class ScrapeMedia {
       scr.nextLine();
       String catCh = scr.nextLine();
       
-      urlCatg += "?tx_category="+category.get(catCh);
+      urlCatg += "?tx_category="+(category.get(catCh) == null ? "" : category.get(catCh));
       
       cPageLinks(urlCatg);
    }
