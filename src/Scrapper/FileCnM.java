@@ -3,8 +3,8 @@ package Scrapper;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
 
 public class FileCnM {
@@ -14,9 +14,16 @@ public class FileCnM {
 		try {
 
 			String contentFinal = contentPtag.replaceAll("Advertisements", "");
+			
+			String userDir = System.getProperty("user.dir");
+			
+			new File(userDir+"\\ScrappedCreepypasta").mkdir(); // Creates a Dir in Project Folder, all files are saved there<
+			
+			userDir += "\\ScrappedCreepypasta\\"; 	
+			
 			Writer out = new BufferedWriter(
 							new OutputStreamWriter(
-								new FileOutputStream("C:\\Users\\dell\\Desktop\\ScrappedCreepypasta\\"+title
+								new FileOutputStream(userDir+title
 									.replaceAll("\\?", "")
 									.replaceAll("<", "")
 									.replaceAll(":", "")
